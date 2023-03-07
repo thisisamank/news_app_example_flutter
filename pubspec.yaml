@@ -1,6 +1,6 @@
 name: news_app_example
 description: A new Flutter project.
-publish_to: "none" # Remove this line if you wish to
+publish_to: "none"
 
 version: 1.0.0+1
 
@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:
