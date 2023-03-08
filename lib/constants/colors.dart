@@ -10,4 +10,11 @@ class AppColors {
   static const purple = Color(0xFFEAE4FD);
   static const secondaryBackground = Color(0xFF232323);
   static const text = Color(0xFF9E9E9E);
+  static const red = Color(0xFFFE0103);
+
+  static const pastelColors = [
+    yellow,
+    pink,
+    purple,
+  ];
 }
