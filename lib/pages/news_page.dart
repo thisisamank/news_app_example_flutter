@@ -22,10 +22,31 @@ class _NewsPageState extends State<NewsPage> {
     // log('News page rebuild');
     return Scaffold(
       backgroundColor: AppColors.background,
-      body: Center(
-        child: CardSwiper<Widget>(
-          cards: [
-            ...widget.articles.map((e) => ArticleCard(e)),
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8),
+              child: Text(
+                "News App",
+                style: GoogleFonts.poppins(
+                  fontSize: 32,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Expanded(
+              child: Center(
+                child: CardSwiper<Widget>(
+                  cards: [
+                    ...widget.articles.map((e) => ArticleCard(e)),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
