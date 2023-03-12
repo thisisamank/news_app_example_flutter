@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:news_app_example/pages/news_page.dart';
 import 'package:news_app_example/repository/news_repository.dart';
@@ -33,8 +31,6 @@ class _NewsLoadingWidgetState extends State<NewsLoadingWidget> {
 
   @override
   Widget build(BuildContext context) {
-    log('App widget rebuild');
-
     return const Center(child: CircularProgressIndicator());
   }
 }
