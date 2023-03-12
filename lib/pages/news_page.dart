@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app_example/constants/colors.dart';
 import 'package:news_app_example/models/article_response.dart';
 import 'package:news_app_example/pages/widgets/article_card.dart';
+import 'package:news_app_example/size_util.dart';
 
 class NewsPage extends StatefulWidget {
   const NewsPage(this.articles, {super.key});
@@ -20,32 +21,29 @@ class _NewsPageState extends State<NewsPage> {
     // log('News page rebuild');
     return Scaffold(
       backgroundColor: AppColors.background,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        title: Text(
+          "News App",
+          style: GoogleFonts.poppins(
+            fontSize: 32,
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8),
-              child: Text(
-                "News App",
-                style: GoogleFonts.poppins(
-                  fontSize: 32,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+        child: Center(
+          child: SizedBox(
+            height: context.height * .6,
+            width: context.width * .8,
+            child: CardSwiper<Widget>(
+              cards: [
+                ...widget.articles.map((e) => ArticleCard(e)),
+              ],
             ),
-            Expanded(
-              child: Center(
-                child: CardSwiper<Widget>(
-                  cards: [
-                    ...widget.articles.map((e) => ArticleCard(e)),
-                  ],
-                ),
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );

@@ -18,7 +18,7 @@ class _NewsLoadingWidgetState extends State<NewsLoadingWidget> {
   void initState() {
     if (mounted) {
       articles.then((value) {
-        Navigator.push(
+        Navigator.pushReplacement(
           context,
           MaterialPageRoute(
             builder: (context) => NewsPage(value!),
