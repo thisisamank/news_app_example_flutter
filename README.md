@@ -8,6 +8,8 @@ This is a Flutter-based News App that allows users to read the latest news from 
 
 This README file will focus on how the REST APIs work and how they are integrated into the app.
 
+The design is inspired from [this](https://dribbble.com/shots/20391043-News-App) dribble design.
+
 ### Demo
 ![Demo Video](./public/news_app_demo.gif)
 
