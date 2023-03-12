@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:news_app_example/pages/news_page.dart';
-import 'package:news_app_example/repository/news_repository.dart';
 
 class NewsLoadingWidget extends StatefulWidget {
   const NewsLoadingWidget({super.key});
@@ -10,22 +8,8 @@ class NewsLoadingWidget extends StatefulWidget {
 }
 
 class _NewsLoadingWidgetState extends State<NewsLoadingWidget> {
-  final newsRepository = NewsRepository();
-
-  late final articles = newsRepository.getArticle();
-
   @override
   void initState() {
-    if (mounted) {
-      articles.then((value) {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => NewsPage(value!),
-          ),
-        );
-      });
-    }
     super.initState();
   }
 
