@@ -9,7 +9,7 @@ This is a Flutter-based News App that allows users to read the latest news from 
 This README file will focus on how the REST APIs work and how they are integrated into the app.
 
 ### Demo
-! [Demo Video](./public/news_app_demo.gif)
+![Demo Video](./public/news_app_demo.gif)
 
 ## REST APIs
 REST stands for Representational State Transfer. It is an architectural style that defines a set of constraints to be used when creating web services. RESTful APIs are web services that conform to these constraints. They are a popular way of building web services because they are simple, scalable, and easy to use.
